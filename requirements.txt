@@ -1,0 +1,9 @@
+# Model notebooks were run on Kaggle (GPU), which already provides these.
+# Python 3.12 (notebooks were run on 3.12 and 3.13).
+# This file is for running locally, mainly Preprocessing.ipynb.
+torch>=2.3
+torchvision>=0.18
+numpy>=1.24
+matplotlib>=3.7
+pillow>=9.5
+jupyter
