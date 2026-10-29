@@ -13,7 +13,9 @@ PackNet, PiggyBack and EvE are implemented as baselines and compared with ORCA-P
 │   ├── PiggyBack.ipynb
 │   ├── EvE.ipynb
 │   ├── ORCA-Pack.ipynb
-│   └── ORCA-Pack_PiggyHybrid.ipynb
+│   ├── ORCA-Pack_PiggyHybrid.ipynb
+│   ├── ORCA-Pack_OrderRobustness.ipynb
+│   └── ORCA-Pack_PiggyHybrid_OrderRobustness.ipynb
 ├── README.md
 └── requirements.txt
 ```
@@ -26,6 +28,8 @@ PackNet, PiggyBack and EvE are implemented as baselines and compared with ORCA-P
 | `EvE.ipynb` | Adaptive per-layer allocation between consecutive tasks (without H2 selection). |
 | `ORCA-Pack.ipynb` | ORCA-Pack : PackNet-based with smart pruning, fair share and a task-ID router. |
 | `ORCA-Pack_PiggyHybrid.ipynb` | ORCA-Pack and PiggyBack hybrid. |
+| `ORCA-Pack_OrderRobustness.ipynb` | Final ORCA-Pack configuration (a=0.7, cap) on all 6 task orders. |
+| `ORCA-Pack_PiggyHybrid_OrderRobustness.ipynb` | Final hybrid configuration (a=0.7, floor) on all 6 task orders. |
 
 ## Setup
 
@@ -88,8 +92,5 @@ Note : Do not rerun `Preprocessing.ipynb` after the dataset is uploaded. The tas
 | 4 | `EvE.ipynb` | Kaggle (GPU) | accuracy matrix and metrics for EvE |
 | 5 | `ORCA-Pack.ipynb` | Kaggle (GPU) | ORCA-Pack results, with the task-ID router |
 | 6 | `ORCA-Pack_PiggyHybrid.ipynb` | Kaggle (GPU) | ORCA-Pack and PiggyBack hybrid results |
-
-1. Run step 1 once, then upload `Data/processed/` as the Kaggle dataset `dl-dataset`.
-2. Steps 2 to 6 only depend on that dataset, not on each other, so they can be run in any order.
-3. Before running a model notebook, attach the dataset and check `DATA_DIR` in the config cell.
-4. For order robustness, set `ORDER_ID` to 0, 1, 2, 3, 4 and 5 in the config cell and rerun steps 2 to 6.
+| 7 | `ORCA-Pack_OrderRobustness.ipynb` | Kaggle (GPU) | `orca_order_robustness.json`, order plots |
+| 8 | `ORCA-Pack_PiggyHybrid_OrderRobustness.ipynb` | Kaggle (GPU) | `orca_hybrid_order_robustness.json`, order plots |
